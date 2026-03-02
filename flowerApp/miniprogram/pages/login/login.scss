@@ -1,0 +1,123 @@
+/* pages/login/login.wxss */
+
+.login-container,
+.register-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: rgb(248, 209, 209);
+  padding: 40rpx 30rpx;
+}
+
+/* 登录/注册头部 */
+.login-header,
+.register-header {
+  text-align: center;
+  margin-top: 60rpx;
+  margin-bottom: 60rpx;
+}
+
+.logo {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  margin: 0 auto 20rpx;
+  display: block;
+  box-shadow: 0 8rpx 16rpx rgba(0, 0, 0, 0.2);
+}
+
+.title {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #fff;
+  display: block;
+  margin-top: 10rpx;
+}
+
+/* 表单容器 */
+.form-wrapper {
+  flex: 1;
+  background: #fff;
+  border-radius: 20rpx;
+  padding: 40rpx;
+  box-shadow: 0 16rpx 32rpx rgba(0, 0, 0, 0.1);
+}
+
+/* 单元格组 */
+van-cell-group {
+  margin-bottom: 40rpx !important;
+}
+
+van-field {
+  --cell-border-color: #f0f0f0;
+}
+
+/* 按钮样式 */
+.login-button,
+.register-button {
+  text-align: center;
+  width: 100%;
+  height: 50rpx;
+  font-size: 16rpx;
+  font-weight: bold;
+  margin: 40rpx 0;
+  border-radius: 10rpx;
+}
+
+/* 链接样式 */
+.register-link,
+.login-link {
+  text-align: center;
+  margin-top: 30rpx;
+}
+
+.register-link text,
+.login-link text {
+  font-size: 25rpx;
+  color: #667eea;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 10rpx;
+}
+
+.register-link text:active,
+.login-link text:active {
+  opacity: 0.7;
+}
+
+/* 加载状态 */
+van-loading {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+
+/* 响应式布局 */
+@media (max-width: 600px) {
+
+  .login-container,
+  .register-container {
+    padding: 20rpx;
+  }
+
+  .login-header,
+  .register-header {
+    margin-top: 40rpx;
+    margin-bottom: 40rpx;
+  }
+
+  .logo {
+    width: 100rpx;
+    height: 100rpx;
+  }
+
+  .title {
+    font-size: 28rpx;
+  }
+
+  .form-wrapper {
+    padding: 30rpx;
+  }
+}

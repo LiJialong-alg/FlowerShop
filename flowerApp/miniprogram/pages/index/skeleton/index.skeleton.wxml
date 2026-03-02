@@ -1,0 +1,153 @@
+<!--
+此文件为开发者工具生成，生成时间: 2026/1/30下午12:41:25
+使用方法：
+在 C:\Users\ASUS\Desktop\小程序\flower\miniprogram\pages\index\index.wxml 引入模板
+
+```
+<import src="index.skeleton.wxml"/>
+<template is="skeleton" wx:if="{{loading}}" />
+```
+
+在 C:\Users\ASUS\Desktop\小程序\flower\miniprogram\pages\index\index.wxss 中引入样式
+```
+@import "./index.skeleton.wxss";
+```
+
+更多详细信息可以参考文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/skeleton.html
+-->
+<template name="skeleton">
+  <view class="sk-container">
+    <view class="index-container">
+      <view class="window-bgc"></view>
+      <view class="container">
+        <view is="pages/index/banner/banner">
+          <view class="banner--swiper-box">
+            <swiper autoplay="false" class="banner--swiper" duration="1000" indicator-active-color="#FF734C" indicator-color="rgba(0, 0, 0, .3)" interval="2000" current="0">
+              <swiper-item class="banner--swiper-item" style="position: absolute; width: 100%; height: 100%; transform: translate(0%, 0px) translateZ(0px);">
+                <navigator class="banner--navigator">
+                  <image class="banner--img sk-image"></image>
+                </navigator>
+              </swiper-item>
+              <swiper-item class="banner--swiper-item" style="position: absolute; width: 100%; height: 100%; transform: translate(100%, 0px) translateZ(0px);">
+                <navigator class="banner--navigator">
+                  <image class="banner--img sk-image"></image>
+                </navigator>
+              </swiper-item>
+            </swiper>
+            <view class="banner--indicator">
+              <text class="banner--active banner--rectangle"></text>
+              <text class="banner--rectangle"></text>
+              <text class="banner--rectangle"></text>
+            </view>
+          </view>
+        </view>
+        <view is="pages/index/entrance/entrance">
+          <view class="entrance--nav-list">
+            <view class="entrance--nav-item">
+              <navigator class="entrance--navigator-nav">
+                <image class="entrance--nav-img sk-image"></image>
+                <text class="entrance--nav-text sk-transparent sk-text-14-2857-354 sk-text">玫瑰花</text>
+              </navigator>
+            </view>
+            <view class="entrance--nav-item">
+              <navigator class="entrance--navigator-nav">
+                <image class="entrance--nav-img sk-image"></image>
+                <text class="entrance--nav-text sk-transparent sk-text-14-2857-271 sk-text">向日葵</text>
+              </navigator>
+            </view>
+            <view class="entrance--nav-item">
+              <navigator class="entrance--navigator-nav">
+                <image class="entrance--nav-img sk-image"></image>
+                <text class="entrance--nav-text sk-transparent sk-text-14-2857-264 sk-text">郁金香</text>
+              </navigator>
+            </view>
+            <view class="entrance--nav-item">
+              <navigator class="entrance--navigator-nav">
+                <image class="entrance--nav-img sk-image"></image>
+                <text class="entrance--nav-text sk-transparent sk-text-14-2857-356 sk-text">康乃馨</text>
+              </navigator>
+            </view>
+            <view class="entrance--nav-item">
+              <navigator class="entrance--navigator-nav">
+                <image class="entrance--nav-img sk-image"></image>
+                <text class="entrance--nav-text sk-transparent sk-text-14-2857-351 sk-text">百合</text>
+              </navigator>
+            </view>
+            <view class="entrance--nav-item entrance--small">
+              <navigator class="entrance--navigator-nav">
+                <image class="entrance--nav-img sk-image"></image>
+                <text class="entrance--nav-text sk-transparent sk-text-14-2857-365 sk-text">樱花</text>
+              </navigator>
+            </view>
+            <view class="entrance--nav-item entrance--small">
+              <navigator class="entrance--navigator-nav">
+                <image class="entrance--nav-img sk-image"></image>
+                <text class="entrance--nav-text sk-transparent sk-text-14-2857-362 sk-text">雏菊</text>
+              </navigator>
+            </view>
+            <view class="entrance--nav-item entrance--small">
+              <navigator class="entrance--navigator-nav">
+                <image class="entrance--nav-img sk-image"></image>
+                <text class="entrance--nav-text sk-transparent sk-text-14-2857-4 sk-text">牡丹</text>
+              </navigator>
+            </view>
+            <view class="entrance--nav-item entrance--small">
+              <navigator class="entrance--navigator-nav">
+                <image class="entrance--nav-img sk-image"></image>
+                <text class="entrance--nav-text sk-transparent sk-text-14-2857-614 sk-text">兰花</text>
+              </navigator>
+            </view>
+            <view class="entrance--nav-item entrance--small">
+              <navigator class="entrance--navigator-nav">
+                <image class="entrance--nav-img sk-image"></image>
+                <text class="entrance--nav-text sk-transparent sk-text-14-2857-229 sk-text">紫罗兰</text>
+              </navigator>
+            </view>
+          </view>
+        </view>
+        <view class="adver">
+          <view class="adver-left">
+            <navigator>
+              <image mode="widthFix" style="height: 228.717px;" class="sk-image"></image>
+            </navigator>
+          </view>
+          <view class="adver-right">
+            <view>
+              <navigator>
+                <image mode="widthFix" style="height: 109.492px;" class="sk-image"></image>
+              </navigator>
+            </view>
+            <view>
+              <navigator>
+                <image mode="widthFix" style="height: 109.492px;" class="sk-image"></image>
+              </navigator>
+            </view>
+          </view>
+        </view>
+        <view is="components/goods-list/goods-list">
+          <view class="list--goods_container">
+            <view class="list--goods_title sk-transparent sk-text-12-9630-587 sk-text" style="background-position-x: 50%;">猜你喜欢</view>
+            <view class="list--goods_card_list sk-pseudo sk-pseudo-circle">
+              <view is="components/goods-card/goods-card">
+                <view class="card--goods_cart_container">
+                  <navigator class="card--navigator_nav">
+                    <image class="card--good_img sk-image" mode="aspectFill"></image>
+                  </navigator>
+                </view>
+              </view>
+              <view is="components/goods-card/goods-card">
+                <view class="card--goods_cart_container">
+                  <navigator class="card--navigator_nav">
+                    <image class="card--good_img sk-image" mode="aspectFill"></image>
+                  </navigator>
+                </view>
+              </view>
+              <view is="components/goods-card/goods-card"></view>
+              <view is="components/goods-card/goods-card"></view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

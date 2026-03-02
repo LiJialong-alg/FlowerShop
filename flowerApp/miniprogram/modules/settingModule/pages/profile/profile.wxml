@@ -1,0 +1,41 @@
+<view class="container">
+  <view class="setting-list avatar-container">
+    <text>头像</text>
+
+    <view class="avatar">
+      <button hover-class="none" open-type="chooseAvatar" bindchooseavatar="chooseAvatar">
+        <image src="{{ userInfo.avatar || '/assets/images/avatar.png' }}" />
+      </button>
+    </view>
+  </view>
+
+  <view class="setting-list nickname" bindtap="onUpdateNickName">
+    <text>昵称</text>
+    <text>{{ userInfo.username || '尚硅谷' }}</text>
+  </view>
+
+  <view class="footer">
+    <view class="btn">保存</view>
+  </view>
+
+  <van-dialog
+    custom-style="position: relative"
+    use-slot
+    title="修改昵称"
+    show="{{ isShowPopup }}"
+    showConfirmButton="{{ false }}"
+    showCancelButton="{{ false }}"
+    transition="fade"
+  >
+    <form bindsubmit="getName">
+      <input type="nickname" name="nickname" class="input-name" 
+      value="{{ userInfo.username }}" />
+      <view class="dialog-content">
+        <button class="cancel" bindtap="cancelForm" form-type="reset">
+        取消
+        </button>
+        <button class="confirm" type="primary" form-type="submit">确定</button>
+      </view>
+    </form>
+  </van-dialog>
+</view>

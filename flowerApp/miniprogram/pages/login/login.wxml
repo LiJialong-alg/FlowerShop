@@ -1,0 +1,105 @@
+<!-- 登录界面 -->
+<view class="login-container" wx:if="{{ !showRegister }}">
+  <view class="login-header">
+    <image src="/assets/images/avatar.png" class="logo"></image>
+    <text class="title">JL花卉商城</text>
+  </view>
+
+  <view class="form-wrapper">
+    <van-cell-group>
+      <van-field
+        value="{{ username }}"
+        placeholder="请输入用户名"
+        border="{{ true }}"
+        bind:change="onUsernameChange"
+        label="用户名"
+      />
+      <van-field
+        value="{{ password }}"
+        type="password"
+        placeholder="请输入密码"
+        border="{{ true }}"
+        bind:change="onPasswordChange"
+        label="密码"
+      />
+    </van-cell-group>
+
+  <view class="login-button">
+  <van-button
+      block
+      round
+      type="danger"
+      bindtap="handleLogin"
+      loading="{{ loginLoading }}"
+      disabled="{{ loginLoading }}"
+    >
+      {{ loginLoading ? '登录中...' : '登录' }}
+    </van-button>
+    </view>
+
+
+    <view class="register-link">
+      <text bindtap="switchToRegister">没有账户？立即注册</text>
+    </view>
+  </view>
+</view>
+
+<!-- 注册界面 -->
+<view class="register-container" wx:if="{{ showRegister }}">
+  <view class="register-header">
+    <image src="/assets/images/avatar.png" class="logo"></image>
+    <text class="title">创建账户</text>
+  </view>
+
+  <view class="form-wrapper">
+    <van-cell-group>
+      <van-field
+        value="{{ regUsername }}"
+        placeholder="请输入用户名"
+        border="{{ true }}"
+        bind:change="onRegUsernameChange"
+        label="用户名"
+      />
+      <van-field
+        value="{{ regPassword }}"
+        type="password"
+        placeholder="请输入密码"
+        border="{{ true }}"
+        bind:change="onRegPasswordChange"
+        label="密码"
+      />
+      <van-field
+        value="{{ regPasswordConfirm }}"
+        type="password"
+        placeholder="确认密码"
+        border="{{ true }}"
+        bind:change="onRegPasswordConfirmChange"
+        label="确认密码"
+      />
+    </van-cell-group>
+
+    <view class="register-button">
+      <van-button
+      round
+      type="danger"
+
+      bindtap="handleRegister"
+      loading="{{ registerLoading }}"
+      disabled="{{ registerLoading }}"
+    >
+      {{ registerLoading ? '注册中...' : '立即注册' }}
+    </van-button>
+    </view>
+
+
+    <view class="login-link">
+      <text bindtap="switchToLogin">已有账户？立即登录</text>
+    </view>
+  </view>
+</view>
+
+<!-- 加载进度条 -->
+<van-loading wx:if="{{ loading }}" />
+
+<!-- 错误提示 -->
+<van-toast id="van-toast" />
