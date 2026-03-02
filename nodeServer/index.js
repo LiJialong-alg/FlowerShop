@@ -18,14 +18,14 @@ const SECRET_KEY = 'flower_secret_key_2024';
 
 // 微信小程序配置
 const WECHAT_CONFIG = {
-    appId: 'wxf435d4b400e57b1a', // 替换为你的微信小程序 AppID
-    appSecret: 'e42a19da06674b9d1b6dcf3a85568d29', // 替换为你的微信小程序 AppSecret
+    appId: '', // 替换为你的微信小程序 AppID
+    appSecret: '', // 替换为你的微信小程序 AppSecret
     authUrl: 'https://api.weixin.qq.com/sns/jscode2session'
 };
 
 // 微信支付配置（需要实际配置）
 const WECHAT_PAY_CONFIG = {
-    appId: 'wxf435d4b400e57b1a', // 需要替换为真实的AppID
+    appId: '', // 需要替换为真实的AppID
     mchId: '1234567890', // 需要替换为真实的商户ID
     apiKey: 'your_api_key_32_characters', // 需要替换为真实的API密钥（32字符）
     notifyUrl: 'http://localhost:3000/api/payment/notify', // 支付回调URL
